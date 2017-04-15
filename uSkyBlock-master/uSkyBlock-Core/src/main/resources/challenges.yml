@@ -479,13 +479,13 @@ ranks:
           currency: 100
           xp: 125
         repeatReward:
-          text: 1 redstone ore, 1 iron ore, 1 flint
+          text: 8 redstone ore, 4 iron ore, 2 flint
           items:
-          - '73:1'
+          - '73:8'
           - '15:4'
-          - '318:1'
-          currency: 15
-          xp: 15
+          - '318:2'
+          currency: 50
+          xp: 62
 
       homeowner:
         name: '&9Home Owner'
@@ -502,8 +502,8 @@ ranks:
           - '73:4'
           - '15:4'
           - '351:5'
-          currency: 40
-          xp: 40
+          currency: 120
+          xp: 125
 
       netherportal:
         name: '&9Nether Portal'
@@ -520,8 +520,8 @@ ranks:
           items:
           - '256:1'
           - '257:1'
-          currency: 40
-          xp: 40
+          currency: 200
+          xp: 220
 
 #===============================================
 
@@ -535,43 +535,45 @@ ranks:
     challenges: 
       toolmaker:
         name: '&3Tool Maker'
-        description: Make all stone tools
+        description: Make all iron tools
         type: onPlayer
         requiredChallenges: [lumberjack]
-        requiredItems: '273:1 274:1 275:1 291:1'
+        requiredItems: '256:1 257:1 258:1 267:1 292:1'
         displayItem: 275
         lockedDisplayItem: STAINED_GLASS_PANE:9
         reward:
-          text: 4 redstone ore, 4 iron, 1 pig
+          text: 4 redstone ore, 8 iron, 1 pig
           items:
           - '73:4'
-          - '15:4'
+          - '15:8'
           - '383:1 {EntityTag:{id:"Pig"}}'
-          currency: 30
-          xp: 30
+          currency: 250
+          xp: 300
 
       torchmaker:
         name: '&3Torch Maker'
         description: Make 128 torches.
-        type: onPlayer
+        type: onIsland
         requiredChallenges: [lumberjack]
         requiredItems: '50:128;+32'
         displayItem: 50
         lockedDisplayItem: STAINED_GLASS_PANE:9
         reward:
-          text: 4 redstone ore, 4 iron ore
+          text: 6 redstone ore, 16 iron ore, 1 diamond ore
           items:
-          - '73:4'
-          - '15:4'
-          currency: 30
-          xp: 30
+          - '73:6'
+          - '15:16'
+          - '56:1'
+          currency: 250
+          xp: 300
         repeatReward:
-          text: 1 redstone ore, 1 iron ore
+          text: 3 redstone ore, 8 iron ore, 1 diamond
           items:
           - '73:1'
           - '15:1'
-          currency: 15
-          xp: 15
+          - '264:1'
+          currency: 125
+          xp: 150
 
       expertfarmer:
         name: '&6Expert Farmer'
@@ -591,19 +593,19 @@ ranks:
         - shroompicker
         requiredItems: '360:256;+2 353:128;+2 296:128;+2 392:128;+2 391:128;+2 86:128;+2 81:128;+2'
         reward:
-          text: a bucket, cocoa and some animals
+          text: a bucket, cocoa, and 6 cows
           items:
           - '325:1'
           - '351:3:1'
-          - '383:1 {EntityTag:{id:"Cow"}}'
-          currency: 50
-          xp: 50
+          - '383:6 {EntityTag:{id:"Cow"}}'
+          currency: 275
+          xp: 300
         repeatReward:
           text: 1 bucket
           items:
           - '325:1'
-          currency: 25
-          xp: 25
+          currency: 88
+          xp: 150
 
       fisherman:
         name: '&5Fisherman'
@@ -624,16 +626,16 @@ ranks:
           - '168:20'
           - '{p=0.20}410:5'
           permission: usb.biome.deep_ocean
-          currency: 50
-          xp: 50
+          currency: 280
+          xp: 300
         repeatReward:
           text: 2 lapis, 5 prismarine, chance at prismarine crystals
           items:
           - '351:4:2'
           - '168:5'
           - '{p=0.20}410:5'
-          currency: 25
-          xp: 25
+          currency: 140
+          xp: 150
 
       woolcollector:
         name: '&5Wool Collector'
@@ -661,19 +663,19 @@ ranks:
         - '35:14:8;+2'
         - '35:15:8;+2'
         reward:
-          text: 2 diamonds, sheep, emerald, flowers
+          text: 7 diamonds, sheep, 2 emeralds, flowers
           items:
-          - '264:2'
+          - '264:7'
           - '2262:1'
           - '2263:1'
           - '2264:1'
-          - '388:1'
+          - '388:2'
           - '383:1 {EntityTag:{id:"Sheep"}}'
           - '175:4:1' # rose
           - '175:5:1' # peony
           permission: usb.biome.flower_forest
-          currency: 70
-          xp: 70
+          currency: 200
+          xp: 210
         repeatReward:
           text: emerald, sheep, flowers
           items:
@@ -684,8 +686,8 @@ ranks:
           - '383:1 {EntityTag:{id:"Sheep"}}'
           - '175:4:1' # rose
           - '175:5:1' # peony
-          currency: 35
-          xp: 35
+          currency: 100
+          xp: 105
 
       maestro:
         name: '&5Maestro'
@@ -700,16 +702,16 @@ ranks:
           - '264:3'
           - '388:10'
           - '41:1'
-          currency: 70
-          xp: 70
+          currency: 500
+          xp: 510
         repeatReward:
           text: 2 gold ore, 1 diamond
           items:
           - '14:2'
           - '264:1'
           - '{p=0.2}264:1'
-          currency: 35
-          xp: 35
+          currency: 250
+          xp: 255
 
       ironfarm:
         name: '&9Iron Farm'
@@ -727,10 +729,10 @@ ranks:
         - 'Villager:10'
         - 'IRON_GOLEM:1'
         reward:
-          text: 2 gold blocks, 1 diamond block
+          text: 3 gold blocks, 10 diamond block
           items:
-          - '41:2'
-          - '57:1'
+          - '41:3'
+          - '57:10'
           currency: 500
           xp: 400
 
@@ -804,8 +806,8 @@ ranks:
           - '175:0:1' # sunflower
           - '175:1:1' # lilac
           permission: usb.biome.flower_forest
-          currency: 70
-          xp: 70
+          currency: 340
+          xp: 370
         repeatReward:
           text: 30% chance on 1 or 2 disks, 1 emeralds
           items:
@@ -814,8 +816,8 @@ ranks:
           - '388:1'
           - '175:0:1' # sunflower
           - '175:1:1' # lilac
-          currency: 35
-          xp: 35
+          currency: 170
+          xp: 185
 
       carpenter:
         name: '&3Carpenter'
@@ -830,16 +832,16 @@ ranks:
           - '73:4'
           - '15:4'
           - '84:1'
-          currency: 30
-          xp: 30
+          currency: 375
+          xp: 380
         repeatReward:
           text: 1 redstone ore, 1 iron ore
           items:
           - '73:1'
           - '15:1'
           - '{p=0.25}84:1'
-          currency: 15
-          xp: 15
+          currency: 188
+          xp: 190
 
       cookielover:
         name: '&eCookie Lover'
@@ -850,12 +852,12 @@ ranks:
         displayItem: 357
         lockedDisplayItem: STAINED_GLASS_PANE:4
         reward:
-          text: 4 redstone ore, 1 diamond
+          text: 4 redstone ore, 7 diamonds
           items:
           - '73:4'
-          - 'DIAMOND:1'
-          currency: 80
-          xp: 80
+          - 'DIAMOND:7'
+          currency: 550
+          xp: 560
         repeatReward:
           text: 1 iron ore, 5 clay
           items:
@@ -863,8 +865,8 @@ ranks:
           - '82:5'
           - '{p=0.4}82:3'
           - '{p=0.3}15:2'
-          currency: 40
-          xp: 40
+          currency: 275
+          xp: 280
 
       horsingaround:
         name: '&6Horsing Around'
@@ -879,8 +881,8 @@ ranks:
           - '417:1'
           - '383:1 {EntityTag:{id:"EntityHorse"}}'
           - '{p=0.05}419:1'
-          currency: 50
-          xp: 50
+          currency: 570
+          xp: 400
         repeatReward:
           text: 1 redstone ore, 1 emerald
           items:
